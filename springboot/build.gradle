@@ -1,0 +1,17 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        //使用2.1.3.RELEASE版本的Spring框架
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:2.1.3.RELEASE")
+    }
+}
+
+group = 'com.study'
+version = '1.0.0'
+// 为所有子项目配置
+subprojects {
+    apply from: '../scripts/gradle/dependencies.gradle'
+    apply from: '../scripts/gradle/subprojectset.gradle'
+}
