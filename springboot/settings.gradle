@@ -1,3 +1,5 @@
 rootProject.name = 'springboot'
 include 'swagger'
+include 'event'
+include 'elasticsearch'
 

@@ -4,9 +4,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @ClassName：WebController
@@ -16,23 +14,23 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping(value = "/api")
-@Api(value = "api")
+@Api(tags = "api")
 public class WebController {
-    private Logger logger = LoggerFactory.getLogger(this.getClass());
+    private Logger logger = LoggerFactory.getLogger(WebController.class);
 
-    @RequestMapping(value = "/hello1", method = RequestMethod.GET)
+    @GetMapping("/hello1")
     @ApiOperation(value = "hello1")
     public String hello() {
         return "你好啊";
     }
 
-    @RequestMapping(value = "/hello2", method = RequestMethod.POST)
+    @PostMapping("/hello2")
     @ApiOperation(value = "hello2")
     public boolean success() {
         return true;
     }
 
-    @RequestMapping(value = "/logback", method = RequestMethod.GET)
+    @GetMapping("/logback")
     public String logback() {
         for (int i = 0; i < 10; i++) {
             //日志级别从低到高分为TRACE < DEBUG < INFO < WARN < ERROR < FATAL，如果设置为WARN，则低于WARN的信息都不会输出。
