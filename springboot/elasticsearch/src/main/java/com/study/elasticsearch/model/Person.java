@@ -11,7 +11,7 @@ import java.util.Date;
  * @author chencong
  * @date 2020/10/27
  */
-@Document(indexName = "person", type = "person")
+@Document(indexName = "person", type = "person", createIndex = false)
 public class Person {
     /**
      * 主键
