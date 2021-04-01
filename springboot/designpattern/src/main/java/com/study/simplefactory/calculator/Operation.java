@@ -1,13 +1,10 @@
-package com.study.simplefactory;
+package com.study.simplefactory.calculator;
 
 
 /**
- * The type Operation.
+ * 运算基类
  *
- * @ClassName：Operation
- * @Description：
- * @Author：ChenCong
- * @Date：Created in 2019/12/27 13:55
+ * @author chencong
  */
 public class Operation {
     private double numberA = 0;
@@ -56,7 +53,6 @@ public class Operation {
      * @throws Exception the exception
      */
     public double getResult() throws Exception {
-        double result = 0;
-        return result;
+        return 0;
     }
 }

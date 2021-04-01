@@ -1,10 +1,9 @@
-package com.study.simplefactory;
+package com.study.simplefactory.calculator;
 
 /**
- * @ClassName：Subtract
- * @Description：
- * @Author：ChenCong
- * @Date：Created in 2019/12/31 11:33
+ * 减法运算
+ *
+ * @author chencong
  */
 public class Subtract extends Operation {
     @Override

@@ -1,10 +1,9 @@
-package com.study.simplefactory;
+package com.study.simplefactory.calculator;
 
 /**
- * @ClassName：Divide
- * @Description：
- * @Author：ChenCong
- * @Date：Created in 2019/12/31 11:34
+ * 除法运算
+ *
+ * @author chencong
  */
 public class Divide extends Operation {
     @Override

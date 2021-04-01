@@ -1,10 +1,9 @@
-package com.study.simplefactory;
+package com.study.simplefactory.calculator;
 
 /**
- * @ClassName：Multiple
- * @Description：
- * @Author：ChenCong
- * @Date：Created in 2019/12/31 11:34
+ * 乘法运算
+ *
+ * @author chencong
  */
 public class Multiple extends Operation {
     @Override

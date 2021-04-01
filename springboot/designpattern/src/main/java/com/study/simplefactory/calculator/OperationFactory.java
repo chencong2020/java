@@ -1,10 +1,9 @@
-package com.study.simplefactory;
+package com.study.simplefactory.calculator;
 
 /**
- * @ClassName：OperationFactory
- * @Description：
- * @Author：ChenCong
- * @Date：Created in 2019/12/31 11:36
+ * 运算工厂
+ *
+ * @author chencong
  */
 public class OperationFactory {
     public static Operation createOperation(String operate) {
@@ -21,6 +20,8 @@ public class OperationFactory {
                 break;
             case "/":
                 operation = new Divide();
+                break;
+            default:
                 break;
         }
         return operation;

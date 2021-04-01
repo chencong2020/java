@@ -1,23 +1,47 @@
-package com.study.simplefactory;
+package com.study.simplefactory.calculator;
 
 import java.text.MessageFormat;
+import java.util.Scanner;
 
 /**
- * @ClassName：Program
- * @Description：
- * @Author：ChenCong
- * @Date：Created in 2019/12/26 15:29
+ * 计算器入口
+ *
+ * @author chencong
  */
 public class Program {
     public static void main(String[] args) throws Exception {
+        Scanner scanner = new Scanner(System.in);
+        String numberA = "";
+        String numberB = "";
+        String operate = "";
         Operation operation;
-        operation = OperationFactory.createOperation("*");
-        operation.setNumberA(4);
-        operation.setNumberB(2);
-
-        double result = operation.getResult();
-        System.out.println(result);
-        System.out.println(MessageFormat.format(LogMsg.Error, "你好"));
+        System.out.println("please enter the first number:");
+        if (scanner.hasNextLine()) {
+            numberA = scanner.nextLine();
+        }
+        System.out.println("请选择运算符号(+、-、*、/)");
+        if (scanner.hasNextLine()) {
+            operate = scanner.nextLine();
+        }
+        System.out.println("please enter the second number:");
+        if (scanner.hasNextLine()) {
+            numberB = scanner.nextLine();
+        }
+        operation = OperationFactory.createOperation(operate);
+        if (operation == null) {
+            System.out.println("请输入正确的运算符");
+        } else {
+            double result = 0;
+            try {
+                operation.setNumberA(Double.parseDouble(numberA));
+                operation.setNumberB(Double.parseDouble(numberB));
+                result = operation.getResult();
+                System.out.println("the result is:" + result);
+            } catch (NumberFormatException e) {
+                System.out.println("您的输入有错：" + e);
+            }
+            System.out.println(MessageFormat.format(LogMsg.Error, "谢谢"));
+        }
     }
     // public static void main(String[] args) {
     //     try {
