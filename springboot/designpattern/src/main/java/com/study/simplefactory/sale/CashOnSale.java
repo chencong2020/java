@@ -10,7 +10,7 @@ public class CashOnSale extends CashSuper {
     /**
      * 折扣率，默认为原价
      */
-    private Double moneyRebate = 1d;
+    private final Double moneyRebate;
 
     /**
      * 初始化时必须输入折扣率，如八折，就是0.8
@@ -22,7 +22,7 @@ public class CashOnSale extends CashSuper {
     }
 
     @Override
-    double acceptCash(double money) {
+    public double acceptCash(double money) {
         return money * moneyRebate;
     }
 }

@@ -14,7 +14,7 @@ public class CashNormal extends CashSuper {
      * @return 原价
      */
     @Override
-    double acceptCash(double money) {
+    public double acceptCash(double money) {
         return money;
     }
 }

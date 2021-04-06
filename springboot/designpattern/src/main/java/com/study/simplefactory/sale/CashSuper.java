@@ -13,5 +13,5 @@ public abstract class CashSuper {
      * @param money 原价
      * @return 返回价
      */
-    abstract double acceptCash(double money);
+    public abstract double acceptCash(double money);
 }

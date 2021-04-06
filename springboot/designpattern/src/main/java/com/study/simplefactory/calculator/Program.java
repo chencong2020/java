@@ -31,7 +31,7 @@ public class Program {
         if (operation == null) {
             System.out.println("请输入正确的运算符");
         } else {
-            double result = 0;
+            double result;
             try {
                 operation.setNumberA(Double.parseDouble(numberA));
                 operation.setNumberB(Double.parseDouble(numberB));
@@ -40,7 +40,7 @@ public class Program {
             } catch (NumberFormatException e) {
                 System.out.println("您的输入有错：" + e);
             }
-            System.out.println(MessageFormat.format(LogMsg.Error, "谢谢"));
+            System.out.println(MessageFormat.format(LogMsg.ERROR, "谢谢"));
         }
     }
     // public static void main(String[] args) {

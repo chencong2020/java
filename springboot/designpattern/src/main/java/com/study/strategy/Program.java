@@ -1,17 +1,15 @@
-package com.study.simplefactory.sale;
+package com.study.strategy;
 
 import java.util.Scanner;
 
 /**
- * 程序入口
- *
  * @author chencong
- * @date 2021/4/1
+ * @date 2021/4/2
  */
 public class Program {
     public static void main(String[] args) {
         // 支付总费用
-        double total;
+        Double total = 0d;
         Scanner scanner = new Scanner(System.in);
         String price = "";
         String number = "";
@@ -31,16 +29,16 @@ public class Program {
         if (scanner.hasNextLine()) {
             type = scanner.nextLine();
         }
-        CashSuper cashSuper = CashFactory.createCashAccept(type);
-        if (cashSuper == null) {
-            System.out.println("请输入正确的付款方式");
-        } else {
-            try {
-                total = cashSuper.acceptCash(Double.parseDouble(price) * Double.parseDouble(number));
+        CashContext cashSuper = new CashContext(type);
+        try {
+            total = cashSuper.getResult(Double.parseDouble(price) * Double.parseDouble(number));
+            if (total == null) {
+                System.out.println("请输入正确的付款方式");
+            } else {
                 System.out.println("商品单价：" + price + "\n数量：" + number + "\n付款方式：" + type + "\n总计：" + total);
-            } catch (NumberFormatException e) {
-                System.out.println("请输入正确的价格和数量：" + e.getMessage());
             }
+        } catch (NumberFormatException e) {
+            System.out.println("请输入正确的价格和数量：" + e.getMessage());
         }
     }
 }

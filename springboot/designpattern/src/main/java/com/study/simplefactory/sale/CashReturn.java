@@ -7,8 +7,8 @@ package com.study.simplefactory.sale;
  * @date 2021/4/1
  */
 public class CashReturn extends CashSuper {
-    private Double moneyCondition = 0d;
-    private Double moneyReturn = 0d;
+    private final Double moneyCondition;
+    private final Double moneyReturn;
 
     /**
      * 返利收费，初始化时必须输入返利条件和返利值，比如满300返100
@@ -22,7 +22,7 @@ public class CashReturn extends CashSuper {
     }
 
     @Override
-    double acceptCash(double money) {
+    public double acceptCash(double money) {
         double result = money;
         // 若支付费用满足返利条件，则需要减去返利值
         if (money > moneyCondition) {

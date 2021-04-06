@@ -6,5 +6,5 @@ package com.study.simplefactory.calculator;
  * @author chencong
  */
 public class LogMsg {
-    public static final String Error = "{0}";
+    public static final String ERROR = "{0}";
 }
