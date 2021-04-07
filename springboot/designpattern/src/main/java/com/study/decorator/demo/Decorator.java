@@ -1,4 +1,4 @@
-package com.study.decorator;
+package com.study.decorator.demo;
 
 /**
  * 装饰抽象类

@@ -1,4 +1,4 @@
-package com.study.decorator;
+package com.study.decorator.demo;
 
 /**
  * 定义了一个具体的对象，也可以给这个对象添加一些职责

@@ -1,4 +1,4 @@
-package com.study.decorator;
+package com.study.decorator.demo;
 
 /**
  * 具体装饰类B
@@ -6,7 +6,7 @@ package com.study.decorator;
  * @author chencong
  * @date 2021/4/6
  */
-public class ConcreteComponentB extends Decorator {
+public class ConcreteDecoratorB extends Decorator {
     /**
      * 首先执行原Component的operation(),再执行本类的功能
      * 如addedBehavior(),相当于对原Component进行了装饰

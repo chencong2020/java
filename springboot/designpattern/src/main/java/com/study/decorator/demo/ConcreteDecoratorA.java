@@ -1,4 +1,4 @@
-package com.study.decorator;
+package com.study.decorator.demo;
 
 /**
  * 具体装饰类A

@@ -1,5 +1,9 @@
 package com.study.decorator;
 
+import com.study.decorator.demo.ConcreteComponent;
+import com.study.decorator.demo.ConcreteDecoratorB;
+import com.study.decorator.demo.ConcreteDecoratorA;
+
 /**
  * @author chencong
  * @date 2021/4/6
@@ -8,7 +12,7 @@ public class Program {
     public static void main(String[] args) {
         ConcreteComponent c = new ConcreteComponent();
         ConcreteDecoratorA d1 = new ConcreteDecoratorA();
-        ConcreteComponentB d2 = new ConcreteComponentB();
+        ConcreteDecoratorB d2 = new ConcreteDecoratorB();
 
         /*
         装饰的方法是：
