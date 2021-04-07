@@ -1,4 +1,4 @@
-package com.study.strategy;
+package com.study.strategy.demo;
 
 /**
  * 抽象算法类
@@ -8,7 +8,7 @@ package com.study.strategy;
  */
 public abstract class Strategy {
     /**
-     * Algorithm interface.
+     * Algorithm interface 抽象算法接口.
      */
     public abstract void algorithmInterface();
 }

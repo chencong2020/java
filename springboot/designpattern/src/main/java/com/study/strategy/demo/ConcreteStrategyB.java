@@ -1,4 +1,4 @@
-package com.study.strategy;
+package com.study.strategy.demo;
 
 /**
  * 具体算法B

@@ -1,4 +1,4 @@
-package com.study.strategy;
+package com.study.strategy.demo;
 
 /**
  * 具体算法A
@@ -8,7 +8,7 @@ package com.study.strategy;
  */
 public class ConcreteStrategyA extends Strategy {
     @Override
-   public void algorithmInterface() {
+    public void algorithmInterface() {
         System.out.println("具体算法A");
     }
 }
